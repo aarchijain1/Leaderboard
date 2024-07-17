@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import Leaderboard from './components/Leaderboard';
+import ScoreForm from './components/ScoreForm';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [showForm, setShowForm] = useState(false);
+
+  const openForm = () => setShowForm(true);
+  const closeForm = () => setShowForm(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="app">
+        <Leaderboard />
+        <div className="button-container">
+          <button onClick={openForm}>Add Score</button>
+        </div>
+        {showForm && <ScoreForm closeForm={closeForm} />}
+        <div className="footer">
+          <img src="/path/to/your/footer/image.jpg" alt="Footer" />
+        </div>
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
