@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Leaderboard from './components/Leaderboard';
 import ScoreForm from './components/ScoreForm';
+// import footerImage from './assets/footer-image.jpg';
 import './App.css';
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
         </div>
         {showForm && <ScoreForm closeForm={closeForm} />}
         <div className="footer">
-          <img src="/path/to/your/footer/image.jpg" alt="Footer" />
+        {/* <img src={footerImage} alt="Footer" /> */}
         </div>
       </div>
     </Provider>

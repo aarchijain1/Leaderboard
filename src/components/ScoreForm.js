@@ -17,7 +17,7 @@ const ScoreForm = ({ closeForm }) => {
   };
 
   return (
-    <div className="score-form-overlay">
+    <div data-aos="zoom-in" className="score-form-overlay">
       <div className="score-form">
         <h3>Add New Score</h3>
         <form onSubmit={handleSubmit}>

@@ -6,6 +6,16 @@ const scoresSlice = createSlice({
   initialState: {
     topScores: [
       { username: 'Alice', time: '02:30:123' },
+      { username: 'Alice', time: '02:30:123' },
+      { username: 'Alice', time: '02:30:123' },
+      { username: 'Alice', time: '02:30:123' },
+      { username: 'Alice', time: '02:30:123' },
+      { username: 'Alice', time: '02:30:123' },
+      { username: 'Bob', time: '02:45:789' },
+      { username: 'Bob', time: '02:45:789' },
+      { username: 'Bob', time: '02:45:789' },
+      { username: 'Bob', time: '02:45:789' },
+      { username: 'Bob', time: '02:45:789' },
       { username: 'Bob', time: '02:45:789' },
       // Add more dummy data as needed
     ]
