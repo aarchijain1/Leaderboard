@@ -16,13 +16,15 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="app">
-        <Leaderboard />
-        <div className="button-container">
-          <button onClick={openForm}>Add Score</button>
+        <div className="content-wrapper">
+          <Leaderboard />
+          <div className="button-container">
+            <button onClick={openForm}>Add Score</button>
+          </div>
+          {showForm && <ScoreForm closeForm={closeForm} />}
         </div>
-        {showForm && <ScoreForm closeForm={closeForm} />}
         <div className="footer">
-        {/* <img src={footerImage} alt="Footer" /> */}
+        <img src="" alt="Footer" />
         </div>
       </div>
     </Provider>
