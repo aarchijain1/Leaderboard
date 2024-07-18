@@ -73,14 +73,17 @@ body {
   border-bottom: none;
 }
 
-.leaderboard .username {
-  margin-right: 20px;
-  color: #ffffff !important;
+.leaderboard .serial-number {
+  width: 30px;
+  text-align: right;
+  margin-right: 10px;
 }
-.leaderboard .time {
-  /* margin-right: 20px; */
+
+.leaderboard .username {
+  flex: 1;
+  text-align: left;
   color: #ffffff !important;
-  
+  font-weight: 400;
 }
 
 .button-container {
@@ -132,7 +135,7 @@ body {
 .score-form label {
   display: block;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .score-form input {
@@ -141,7 +144,7 @@ body {
   margin-bottom: 20px;
   border: 1px solid #9794af;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 20px;
   background: var(--dark-card-bg);
   color: var(--dark-text-color);
 }
@@ -161,12 +164,12 @@ body {
 }
 
 .score-form button[type="button"] {
-  background: #6c757d;
+  background: #f06553;
   margin-left: 10px;
 }
 
 .score-form button[type="button"]:hover {
-  background: #5a6268;
+  background: #df431c;
 }
 
 .footer {

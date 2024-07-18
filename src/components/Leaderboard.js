@@ -1,12 +1,24 @@
 // src/components/Leaderboard.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { FaCrown } from 'react-icons/fa';
-// import bgimg from "../assets/bgimage.jpg"
+// import './Leaderboard.css';
 
 const Leaderboard = () => {
   const scores = useSelector((state) => state.scores.topScores);
-  const topScores = scores.slice(0, 10)
+const topScores = scores.slice(0, 10); // Get only the top 10 scores
+const [newEntryIndex, setNewEntryIndex] = useState(null);
+
+useEffect(() => {
+  if (scores.length > 0) {
+    const newIndex = topScores.findIndex(
+      (score) => score.username === scores[0].username && score.time === scores[0].time
+    );
+    setNewEntryIndex(newIndex);
+    const timer = setTimeout(() => setNewEntryIndex(null), 2000); // Clear the animation after 2 seconds
+    return () => clearTimeout(timer);
+  }
+}, [scores, topScores]);
 
 //   const bgImage = {
 //     backgroundImage: `url(${bgimg})`,
@@ -29,9 +41,13 @@ const Leaderboard = () => {
         <div className='leaderboard'>
 
         
-    <ul>
+        <ul>
         {topScores.map((score, index) => (
-          <li key={index}>
+          <li
+            key={index}
+            className={newEntryIndex === index ? 'new-entry' : ''}
+          >
+            <span className="serial-number">{index + 1}.</span>
             <span className="username">{score.username}</span>
             <span className="time">{score.time}</span>
           </li>
