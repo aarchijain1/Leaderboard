@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { FaCrown } from 'react-icons/fa';
+import { FaTrophy } from "react-icons/fa6";
+// import { BiTimer } from "react-icons/bi";
 // import './Leaderboard.css';
 
 const Leaderboard = () => {
@@ -41,11 +43,21 @@ useEffect(() => {
         <div className='leaderboard'>
 
         
-        <ul>
+         <ul>
+         <li>
+          <span className="serial"><FaTrophy /></span>
+            <span className="username">NAME</span>
+            <span className="time">TIME</span>
+          </li>
         {topScores.map((score, index) => (
           <li
             key={index}
-            className={newEntryIndex === index ? 'new-entry' : ''}
+            className={`
+              ${newEntryIndex === index ? 'new-entry' : ''}
+              ${index === 0 ? 'gold' : ''}
+              ${index === 1 ? 'silver' : ''}
+              ${index === 2 ? 'bronze' : ''}
+            `}
           >
             <span className="serial-number">{index + 1}.</span>
             <span className="username">{score.username}</span>

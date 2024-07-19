@@ -23,10 +23,11 @@ const App = () => {
           </div>
           {showForm && <ScoreForm closeForm={closeForm} />}
         </div>
+        </div>
         <div className="footer">
         <img src="" alt="Footer" />
         </div>
-      </div>
+      
     </Provider>
   );
 };
