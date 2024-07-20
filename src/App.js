@@ -3,7 +3,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import Wrapper from './components/Wrapper';
-// import footerImage from './assets/footer-image.jpg';
 import './App.css';
 
 function App() {
@@ -13,7 +12,9 @@ function App() {
     <Provider store={store}>
       <Wrapper/>
         <div className="footer">
-        <img src="" alt="Footer" />
+        </div>
+        <div className="marquee">
+          <span>Get your name on the leaderboard and win exciting prizes.Join and show off your skills!</span>
         </div>
       
     </Provider>
@@ -21,4 +22,3 @@ function App() {
 };
 
 export default App;
-

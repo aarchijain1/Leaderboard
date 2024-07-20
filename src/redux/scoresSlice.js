@@ -5,14 +5,15 @@ const scoresSlice = createSlice({
   name: 'scores',
   initialState: {
     topScores: [
-      { username: 'Alice', time: '02:30:123' },
-      { username: 'Alice', time: '02:30:123' },
-      { username: 'Alice', time: '02:30:123' },
-      { username: 'Alice', time: '02:30:123' },
-      { username: 'Bob', time: '02:45:789' },
-      { username: 'Bob', time: '02:45:789' },
-      { username: 'Bob', time: '02:45:789' },
-      { username: 'Bob', time: '02:45:789' },
+      { username: 'M.S. Dhoni', time: '02:30:123' },
+      { username: 'Virat Kohli', time: '03:30:123' },
+      { username: 'Sachin Tendulkar', time: '03:33:123' },
+      { username: 'Rahul Dravid', time: '04:30:123' },
+      { username: 'KL Rahul', time: '04:05:789' },
+      { username: 'Rohit Sharma', time: '04:04:444' },
+      { username: 'Bumrah', time: '05:45:789' },
+      { username: 'Hardik Pandaya', time: '06:45:789' },
+     
       // Add more dummy data as needed
     ]
   },
